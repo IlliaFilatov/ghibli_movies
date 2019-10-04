@@ -79,7 +79,6 @@
   .modal-info {
     box-sizing: border-box;
     position: relative;
-    margin: 0 auto;
     padding: 20px;
     max-width: 800px;
     background: lightcoral;
@@ -129,5 +128,16 @@
   ::selection {
     color: white;
     background: lightcoral;
+  }
+}
+
+@media (max-width: 700px) {
+  .App {
+    grid-template-columns: 1fr;
+    margin: 0;
+
+    .modal-container {
+      padding: 20px;
+    }
   }
 }
