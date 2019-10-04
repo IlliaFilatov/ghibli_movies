@@ -72,6 +72,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    padding: 20px;
     display: grid;
     align-items: center; 
     justify-content: center;
@@ -136,9 +137,5 @@
   .App {
     grid-template-columns: 1fr;
     margin: 0;
-
-    .modal-container {
-      padding: 20px;
-    }
   }
 }
