@@ -1,0 +1,133 @@
+.App {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3vw;
+  background: lightcoral;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, .4);
+  
+  .button {
+    position: absolute;
+    top: 0; 
+    right: 15px;
+    width: 40px;
+    height: 34px;
+    font-size: 20px;
+    line-height: 22px;
+    font-family: 'Cookie', cursive;
+    color: white;
+    border: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, .3);
+    transition: .10s all linear;
+
+    &:hover {
+      height: 50px;
+    }
+  }
+  .logo {
+    padding: 15px;
+    width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+  }
+  .search {
+    padding: 5px;
+    width: 100%;
+    color: lightcoral;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+  }
+  .card {
+    position: relative;
+    background: white;
+    color: lightcoral;
+    border: 2px solid lightcoral;
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, .4);
+
+    .card__header {
+      padding: 10px 15px;
+      border-bottom: 2px solid lightcoral;
+    }
+    .card__button {
+      background: lightcoral;
+    }
+    .card__body {
+      padding: 10px 15px;
+    }
+    .card__info {
+      padding: 10px 15px;
+    }
+  }
+  .modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    align-items: center; 
+    background: rgba(0, 0, 0, .6);
+  }
+  .modal-info {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    background: lightcoral;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, .4);
+
+    .modal-info__header {
+      margin: 0;
+      padding: 15px;
+      border-bottom: 1px solid white;
+    }
+    .modal-info__description {
+      margin: 0;
+      padding: 15px;
+      border-bottom: 1px solid white;
+    }
+    .modal-info__authors {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .modal-info__authors__director {
+        padding: 10px 15px;
+      }
+      .modal-info__authors__producer {
+        padding: 10px 15px;
+      }
+    }
+    .modal-info__numbers {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .modal-info__numbers__date {
+        padding: 10px 15px;
+      }
+      .modal-info__numbers__score {
+        padding: 10px 15px;
+      }
+    }
+    .close-modal {
+      background: white;
+      color: lightcoral;
+    }
+  }
+  ::selection {
+    color: white;
+    background: lightcoral;
+  }
+}
