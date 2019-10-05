@@ -19,7 +19,7 @@ export default function Modal(){
             </p>
             <p className="modal-info__numbers">
               <span className="modal-info__numbers__date">Release: {films[details].release_date}</span>
-              <span className="modal-info__numbers__score">Rotten Tomatos Score: {films[details].rt_score}/100</span>
+              <span className="modal-info__numbers__score">RT Score: {films[details].rt_score}/100</span>
             </p>
             <button className="close-modal button" onClick={() => dispatch(getDetails(null))}>close</button>
           </div>
