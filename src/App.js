@@ -23,23 +23,23 @@ function App() {
     };
   });
 
-  function searchFilms() {
-    let inputValue = document.getElementById('search-input').value;
-    let reg = new RegExp(inputValue, 'gi');
+  function searchFilms(e) {
+      let value = e.target.value;
+      let reg = new RegExp(value, 'gi');
 
-    dispatch(getFilms(filmsList));
-    dispatch(filterFilms(reg));
-
-    if(inputValue.length === 0) {
       dispatch(getFilms(filmsList));
-    }
+      dispatch(filterFilms(reg));
+  
+      if(value.length === 0) {
+        dispatch(getFilms(filmsList));
+      }
   }
 
   return (
     <div className="App">
       <div>
         <img src={ghibli} alt="" className="logo"/>
-        <input id="search-input" type="text" placeholder="search" className="search" onChange={() => searchFilms()}/>
+        <input id="search-input" type="text" placeholder="search" className="search" onChange={(e) => searchFilms(e)}/>
       </div>
       <Cards></Cards> 
       <Modal></Modal>     
